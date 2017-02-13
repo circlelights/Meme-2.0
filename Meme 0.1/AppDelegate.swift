@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Meme 0.1
+//  Meme 1.0
 //
 //  Created by Developer2017 on 1/17/17.
 //  Copyright © 2017 Developer2017. All rights reserved.

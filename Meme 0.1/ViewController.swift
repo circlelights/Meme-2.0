@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Meme 0.1
+//  Meme 1.0
 //
 //  Created by Developer2017 on 1/17/17.
 //  Copyright © 2017 Developer2017. All rights reserved.
@@ -107,7 +107,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func saveMeme(memedImage: UIImage) {
         // Create the meme
-        let meme = Meme(topString: top.text!, bottomString: bottom.text!, originalImage: imagePickerView.image!, memedImage: memedImage)
+        _ = Meme(topString: top.text!, bottomString: bottom.text!, originalImage: imagePickerView.image!, memedImage: memedImage)
     }
     
     @IBAction func shareMemeButtonPressed(sender: UIBarButtonItem) {
@@ -115,12 +115,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let memedImage = self.generateMemedImage()
         let activityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
+ //[       activityViewController.dismiss(animated: true, completion: nil)
+    }
+   
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.view.frame.origin.y = 0
+        return true
     }
     
-    
-    
+    //Move the view so that the textfield is not obscured
     func keyboardWillShow(_ notification:Notification) {
-        self.view.frame.origin.y = 0 - getKeyboardHeight(notification)
+        if bottom.isEditing == true {
+            self.view.frame.origin.y = 0 - getKeyboardHeight(notification)
+        }   else {
+            self.view.frame.origin.y = 0
+        }
     }
     
     func keyboardWillHide(_ notification:Notification) {
