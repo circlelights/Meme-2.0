@@ -22,61 +22,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="451-Tj-upy">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="451-Tj-upy">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Vrd-dX-sMN"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="sBX-P5-VWF"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dYb-Rj-zOI"/>
                                     <barButtonItem systemItem="camera" id="tzR-g9-LB9">
                                         <connections>
                                             <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="d17-2O-3aQ"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="vzM-qW-B2R"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="gYh-BX-HOe"/>
                                     <barButtonItem title="Album" id="xmN-ow-3WI">
                                         <connections>
                                             <action selector="pickAnImage:" destination="BYZ-38-t0r" id="ZfJ-no-ASU"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AGx-F1-AH3"/>
                                 </items>
                             </toolbar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zev-XD-Q7A">
-                                <rect key="frame" x="0.0" y="123" width="375" height="408"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5x-9H-PLu">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="408"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ql-3T-eyH">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="408"/>
-                                            </imageView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="8ql-3T-eyH" firstAttribute="centerX" secondItem="v5x-9H-PLu" secondAttribute="centerX" id="UzF-JW-sCh"/>
-                                            <constraint firstItem="8ql-3T-eyH" firstAttribute="centerY" secondItem="v5x-9H-PLu" secondAttribute="centerY" id="csQ-4S-0mj"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2Ky-zD-gPD">
-                                <rect key="frame" x="75" y="176" width="225" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ql-3T-eyH">
+                                <rect key="frame" x="38" y="85" width="309" height="513"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2Ky-zD-gPD">
+                                <rect key="frame" x="75" y="137" width="225" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Kz6-2N-icD">
-                                <rect key="frame" x="75" y="409" width="225" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Kz6-2N-icD">
+                                <rect key="frame" x="75" y="484" width="225" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYg-9s-1Cz">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3l0-5I-xdz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Meme 1.0" id="7HL-ZW-g9j">
-                                        <barButtonItem key="leftBarButtonItem" title="Share" id="vpu-I3-P5O">
+                                    <navigationItem title="Meme 1.0" id="9tF-84-aJd">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="xlv-Ie-VqX">
                                             <connections>
-                                                <action selector="shareMemeButtonPressedWithSender:" destination="BYZ-38-t0r" id="5Pk-Ls-9YN"/>
+                                                <action selector="shareMemeButtonPressedWithSender:" destination="BYZ-38-t0r" id="XjN-MG-R4s"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="cGk-Xx-GqW">
+                                            <connections>
+                                                <action selector="cancelMeme:" destination="BYZ-38-t0r" id="TiU-Ne-8fM"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -85,22 +76,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Zev-XD-Q7A" firstAttribute="leading" secondItem="451-Tj-upy" secondAttribute="leading" id="91F-QX-bwJ"/>
-                            <constraint firstItem="451-Tj-upy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BNg-eW-Nch"/>
-                            <constraint firstItem="hYg-9s-1Cz" firstAttribute="leading" secondItem="Zev-XD-Q7A" secondAttribute="leading" id="EAz-b5-6EL"/>
-                            <constraint firstItem="2Ky-zD-gPD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="Hgq-02-uH3"/>
-                            <constraint firstItem="Zev-XD-Q7A" firstAttribute="trailing" secondItem="451-Tj-upy" secondAttribute="trailing" id="IpA-kq-vFD"/>
-                            <constraint firstItem="2Ky-zD-gPD" firstAttribute="trailing" secondItem="Kz6-2N-icD" secondAttribute="trailing" id="NPo-sL-tjb"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="451-Tj-upy" secondAttribute="bottom" id="Rat-oF-lH6"/>
-                            <constraint firstItem="451-Tj-upy" firstAttribute="top" secondItem="Zev-XD-Q7A" secondAttribute="bottom" constant="92" id="Vrn-aO-eoi"/>
-                            <constraint firstAttribute="trailing" secondItem="451-Tj-upy" secondAttribute="trailing" id="ahr-e4-Css"/>
-                            <constraint firstItem="hYg-9s-1Cz" firstAttribute="trailing" secondItem="Zev-XD-Q7A" secondAttribute="trailing" id="cSd-uW-8Dn"/>
-                            <constraint firstItem="Zev-XD-Q7A" firstAttribute="top" secondItem="hYg-9s-1Cz" secondAttribute="bottom" constant="79" id="hOP-ra-AvP"/>
-                            <constraint firstItem="2Ky-zD-gPD" firstAttribute="centerX" secondItem="hYg-9s-1Cz" secondAttribute="centerX" id="p1D-Zr-nt9"/>
-                            <constraint firstItem="2Ky-zD-gPD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="176" id="qJV-Hb-6c0"/>
-                            <constraint firstItem="2Ky-zD-gPD" firstAttribute="leading" secondItem="Kz6-2N-icD" secondAttribute="leading" id="qwR-lg-bW9"/>
-                            <constraint firstAttribute="bottom" secondItem="Kz6-2N-icD" secondAttribute="bottom" constant="228" id="yOB-nq-DBM"/>
-                            <constraint firstItem="hYg-9s-1Cz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zGT-7O-XTr"/>
+                            <constraint firstItem="451-Tj-upy" firstAttribute="centerX" secondItem="Kz6-2N-icD" secondAttribute="centerX" id="2Cg-3L-Zyg"/>
+                            <constraint firstItem="Kz6-2N-icD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ZW-5G-g6p"/>
+                            <constraint firstItem="8ql-3T-eyH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="743-sj-HMw"/>
+                            <constraint firstItem="2Ky-zD-gPD" firstAttribute="leading" secondItem="Kz6-2N-icD" secondAttribute="leading" id="CuL-Fe-LZ6"/>
+                            <constraint firstItem="Kz6-2N-icD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="GOo-b0-3fM"/>
+                            <constraint firstItem="451-Tj-upy" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Ij2-En-etB"/>
+                            <constraint firstItem="451-Tj-upy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KKh-dW-mJr"/>
+                            <constraint firstItem="451-Tj-upy" firstAttribute="top" secondItem="8ql-3T-eyH" secondAttribute="bottom" constant="25" id="Qmb-X4-jQ3"/>
+                            <constraint firstItem="8ql-3T-eyH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="65" id="TfJ-aJ-Z7T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8ql-3T-eyH" secondAttribute="trailing" constant="12" id="Ydh-ua-dIP"/>
+                            <constraint firstItem="451-Tj-upy" firstAttribute="centerX" secondItem="2Ky-zD-gPD" secondAttribute="centerX" id="ZqL-zZ-N3j"/>
+                            <constraint firstItem="Kz6-2N-icD" firstAttribute="top" secondItem="8ql-3T-eyH" secondAttribute="bottom" constant="-114" id="aPo-ie-Xbq"/>
+                            <constraint firstItem="8ql-3T-eyH" firstAttribute="top" secondItem="2Ky-zD-gPD" secondAttribute="bottom" constant="-82" id="hO9-V2-Agx"/>
+                            <constraint firstAttribute="bottom" secondItem="Kz6-2N-icD" secondAttribute="bottom" constant="153" id="mMr-4Q-8OF"/>
+                            <constraint firstItem="2Ky-zD-gPD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="117" id="sM1-LE-nlq"/>
                         </constraints>
                     </view>
                     <connections>
@@ -112,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+            <point key="canvasLocation" x="32.5" y="37.5"/>
         </scene>
     </scenes>
 </document>

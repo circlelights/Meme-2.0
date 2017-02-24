@@ -67,6 +67,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(pickerController, animated: true, completion: nil)
     }
     
+    @IBAction func cancelMeme(_ sender: Any) {
+        bottom.text = ""
+        top.text = ""
+        imagePickerView.image = nil
+    }
+
     
     //Connect this to the CAMERA button
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
@@ -87,20 +93,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     func generateMemedImage() -> UIImage {
-        
-        // Hide toolbar and navbar
-//        self.toolbar.hidden = true
-//        UIApplication.sharedApplication().statusBarHidden = true
-        
+
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memeImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        
-        // Show toolbar and navbar
-//        self.toolbar.hidden = false
-//        UIApplication.sharedApplication().statusBarHidden = false
         
         return memeImage
     }
@@ -115,7 +113,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let memedImage = self.generateMemedImage()
         let activityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
- //[       activityViewController.dismiss(animated: true, completion: nil)
     }
    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
