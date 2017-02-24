@@ -68,8 +68,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func cancelMeme(_ sender: Any) {
-        bottom.text = ""
-        top.text = ""
+        bottom.text = "BOTTOM"
+        top.text = "TOP"
         imagePickerView.image = nil
     }
 

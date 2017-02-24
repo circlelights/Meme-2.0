@@ -83,6 +83,7 @@
                             <constraint firstItem="Kz6-2N-icD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="GOo-b0-3fM"/>
                             <constraint firstItem="451-Tj-upy" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Ij2-En-etB"/>
                             <constraint firstItem="451-Tj-upy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KKh-dW-mJr"/>
+                            <constraint firstItem="Kz6-2N-icD" firstAttribute="width" secondItem="2Ky-zD-gPD" secondAttribute="width" id="LvQ-g4-1Ip"/>
                             <constraint firstItem="451-Tj-upy" firstAttribute="top" secondItem="8ql-3T-eyH" secondAttribute="bottom" constant="25" id="Qmb-X4-jQ3"/>
                             <constraint firstItem="8ql-3T-eyH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="65" id="TfJ-aJ-Z7T"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8ql-3T-eyH" secondAttribute="trailing" constant="12" id="Ydh-ua-dIP"/>
@@ -102,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.5" y="37.5"/>
+            <point key="canvasLocation" x="31.199999999999999" y="37.331334332833585"/>
         </scene>
     </scenes>
 </document>
