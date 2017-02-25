@@ -9,19 +9,14 @@
 import UIKit
 
 
-struct Meme {
-    var topString: String
-    var bottomString: String
-    var originalImage: UIImage
-    var memedImage: UIImage
-}
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var bottom: UITextField!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var top: UITextField!
+    let imagePicker = UIImagePickerController()
     
     let memeTextAttributes:[String:Any] = [
         NSStrokeColorAttributeName: UIColor.black,
@@ -32,14 +27,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        top.delegate = self
-        bottom.delegate = self
-        top.defaultTextAttributes = memeTextAttributes
-        bottom.defaultTextAttributes = memeTextAttributes
+        configureTextField(textField: top)
+        configureTextField(textField: bottom)
         top.text = "TOP"
         bottom.text = "BOTTOM"
-        top.textAlignment = .center
-        bottom.textAlignment = .center
+    }
+    
+    func configureTextField(textField: UITextField) {
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.delegate = self
+        textField.textAlignment = .center
     }
 
     
@@ -61,32 +58,32 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //Connect this to the ALBUM button
     @IBAction func pickAnImage(_ sender: Any) {
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self
-        pickerController.sourceType = .photoLibrary
-        present(pickerController, animated: true, completion: nil)
-    }
-    
-    @IBAction func cancelMeme(_ sender: Any) {
-        bottom.text = "BOTTOM"
-        top.text = "TOP"
-        imagePickerView.image = nil
-    }
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
 
+    }
     
     //Connect this to the CAMERA button
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
-        
-        let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
     
+    //Cancel Button
+    @IBAction func cancelMeme(_ sender: Any) {
+        bottom.text = "BOTTOM"
+        top.text = "TOP"
+        imagePickerView.image = nil
+    }
+    
+    
     //Two Delegate Methods for UIImagePickerControllerDelegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imagePickerView.image = image
+            imagePickerView.contentMode = UIViewContentMode.scaleAspectFit
         dismiss(animated: true, completion: nil)
     }
     }
@@ -113,6 +110,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let memedImage = self.generateMemedImage()
         let activityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
+        if activityViewController.completionWithItemsHandler != nil {
+            saveMeme(memedImage: memedImage)
+        }
     }
    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
