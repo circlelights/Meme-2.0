@@ -22,7 +22,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSStrokeWidthAttributeName: 2.0]
+        NSStrokeWidthAttributeName: -2.0]
     
     
     override func viewDidLoad() {
@@ -38,7 +38,16 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         textField.delegate = self
         textField.textAlignment = .center
     }
-
+    
+    public func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == top {
+            top.resignFirstResponder()
+        }
+        if textField == bottom {
+            bottom.resignFirstResponder()
+    }
+        return true
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable( .camera)
@@ -53,22 +62,24 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.subscribeToKeyboardNotificationsDismiss()
+        self.subscribeToKeyboardNotifications()
+    }
+    
+    func presentImagePickerWith(sourceType: UIImagePickerControllerSourceType){
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = sourceType
+        present(imagePicker, animated: true, completion: nil)
     }
     
     //Connect this to the ALBUM button
     @IBAction func pickAnImage(_ sender: Any) {
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
-
+        presentImagePickerWith(sourceType: .photoLibrary)
     }
     
     //Connect this to the CAMERA button
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        present(imagePicker, animated: true, completion: nil)
+        presentImagePickerWith(sourceType: .camera)
     }
     
     //Cancel Button
@@ -110,8 +121,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         let memedImage = self.generateMemedImage()
         let activityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
-        if activityViewController.completionWithItemsHandler != nil {
-            saveMeme(memedImage: memedImage)
+        activityViewController.completionWithItemsHandler = { (_, successful, _, _) in
+            if successful {
+                self.saveMeme(memedImage: memedImage)
+            }
         }
     }
    
@@ -147,15 +160,14 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func subscribeToKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
-    }
-    
-    func subscribeToKeyboardNotificationsDismiss() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
     }
+
     
     func unsubscribeFromKeyboardNotifications() {
         
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
 
 }
