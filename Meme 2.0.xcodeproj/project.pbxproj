@@ -13,6 +13,8 @@
 		9B155AC11E2EC7E000ED6DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B155AC01E2EC7E000ED6DB8 /* Assets.xcassets */; };
 		9B155AC41E2EC7E000ED6DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B155AC21E2EC7E000ED6DB8 /* LaunchScreen.storyboard */; };
 		EB1DEDC01E62196300C42E2E /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1DEDBF1E62196300C42E2E /* Meme.swift */; };
+		EB93038C1E6FA089003EDD70 /* Meme 2.0.app in Resources */ = {isa = PBXBuildFile; fileRef = 9B155AB61E2EC7E000ED6DB8 /* Meme 2.0.app */; };
+		EB93038D1E6FA24F003EDD70 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B155AC51E2EC7E000ED6DB8 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +132,8 @@
 				9B155AC41E2EC7E000ED6DB8 /* LaunchScreen.storyboard in Resources */,
 				9B155AC11E2EC7E000ED6DB8 /* Assets.xcassets in Resources */,
 				9B155ABF1E2EC7E000ED6DB8 /* Main.storyboard in Resources */,
+				EB93038D1E6FA24F003EDD70 /* Info.plist in Resources */,
+				EB93038C1E6FA089003EDD70 /* Meme 2.0.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +272,7 @@
 				DEVELOPMENT_TEAM = Q39FF877S4;
 				INFOPLIST_FILE = "$(SRCROOT)/Meme 2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.circlelights.Meme-1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.circlelights.Meme-2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -281,7 +285,7 @@
 				DEVELOPMENT_TEAM = Q39FF877S4;
 				INFOPLIST_FILE = "$(SRCROOT)/Meme 2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.circlelights.Meme-1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.circlelights.Meme-2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
