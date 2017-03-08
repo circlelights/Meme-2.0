@@ -27,13 +27,13 @@ class SentMemesCollectionViewController : UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemesCollectionViewCell", for: indexPath) as! MemesCollectionViewCell
-//        let villain = self.memes[(indexPath as NSIndexPath).row]
-//        
-//        // Set the name and image
-//        cell.nameLabel.text = villain.name
-//        cell.villainImageView?.image = UIImage(named: villain.imageName)
-//        //cell.schemeLabel.text = "Scheme: \(villain.evilScheme)"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemesCollectionViewCell", for: indexPath) as! MemesCollectionViewCell
+        let newMeme = self.memes[(indexPath as NSIndexPath).row]
+        
+        // Set the name and image
+        cell.topLabel.text = newMeme.topString
+        cell.bottomLabel.text = newMeme.bottomString
+        cell.memeImageView?.image = newMeme.memedImage
         
         return cell
     }
