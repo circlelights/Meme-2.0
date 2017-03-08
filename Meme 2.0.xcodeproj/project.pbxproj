@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9B155AB61E2EC7E000ED6DB8 /* Meme 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meme 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B155AB61E2EC7E000ED6DB8 /* Meme 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meme 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B155AB91E2EC7E000ED6DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B155ABB1E2EC7E000ED6DB8 /* MemeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeEditorViewController.swift; sourceTree = "<group>"; };
 		9B155ABE1E2EC7E000ED6DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		9B155AAD1E2EC7E000ED6DB8 = {
 			isa = PBXGroup;
 			children = (
-				9B155AB81E2EC7E000ED6DB8 /* Meme 1.0 */,
+				9B155AB81E2EC7E000ED6DB8 /* Meme 2.0 */,
 				9B155AB71E2EC7E000ED6DB8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		9B155AB71E2EC7E000ED6DB8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B155AB61E2EC7E000ED6DB8 /* Meme 1.0.app */,
+				9B155AB61E2EC7E000ED6DB8 /* Meme 2.0.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9B155AB81E2EC7E000ED6DB8 /* Meme 1.0 */ = {
+		9B155AB81E2EC7E000ED6DB8 /* Meme 2.0 */ = {
 			isa = PBXGroup;
 			children = (
 				9B155AB91E2EC7E000ED6DB8 /* AppDelegate.swift */,
@@ -64,16 +64,15 @@
 				9B155AC21E2EC7E000ED6DB8 /* LaunchScreen.storyboard */,
 				9B155AC51E2EC7E000ED6DB8 /* Info.plist */,
 			);
-			name = "Meme 1.0";
-			path = "Meme 0.1";
+			path = "Meme 2.0";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B155AB51E2EC7E000ED6DB8 /* Meme 1.0 */ = {
+		9B155AB51E2EC7E000ED6DB8 /* Meme 2.0 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B155AC81E2EC7E000ED6DB8 /* Build configuration list for PBXNativeTarget "Meme 1.0" */;
+			buildConfigurationList = 9B155AC81E2EC7E000ED6DB8 /* Build configuration list for PBXNativeTarget "Meme 2.0" */;
 			buildPhases = (
 				9B155AB21E2EC7E000ED6DB8 /* Sources */,
 				9B155AB31E2EC7E000ED6DB8 /* Frameworks */,
@@ -83,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = "Meme 1.0";
+			name = "Meme 2.0";
 			productName = "Meme 0.1";
-			productReference = 9B155AB61E2EC7E000ED6DB8 /* Meme 1.0.app */;
+			productReference = 9B155AB61E2EC7E000ED6DB8 /* Meme 2.0.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9B155AB11E2EC7E000ED6DB8 /* Build configuration list for PBXProject "Meme 1.0" */;
+			buildConfigurationList = 9B155AB11E2EC7E000ED6DB8 /* Build configuration list for PBXProject "Meme 2.0" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -118,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B155AB51E2EC7E000ED6DB8 /* Meme 1.0 */,
+				9B155AB51E2EC7E000ED6DB8 /* Meme 2.0 */,
 			);
 		};
 /* End PBXProject section */
@@ -267,7 +266,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q39FF877S4;
-				INFOPLIST_FILE = "Meme 0.1/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Meme 2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.circlelights.Meme-1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -280,7 +279,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q39FF877S4;
-				INFOPLIST_FILE = "Meme 0.1/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Meme 2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.circlelights.Meme-1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,7 +290,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B155AB11E2EC7E000ED6DB8 /* Build configuration list for PBXProject "Meme 1.0" */ = {
+		9B155AB11E2EC7E000ED6DB8 /* Build configuration list for PBXProject "Meme 2.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B155AC61E2EC7E000ED6DB8 /* Debug */,
@@ -300,7 +299,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B155AC81E2EC7E000ED6DB8 /* Build configuration list for PBXNativeTarget "Meme 1.0" */ = {
+		9B155AC81E2EC7E000ED6DB8 /* Build configuration list for PBXNativeTarget "Meme 2.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B155AC91E2EC7E000ED6DB8 /* Debug */,
