@@ -39,16 +39,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         textField.textAlignment = .center
     }
     
-    public func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if textField == top {
-            top.resignFirstResponder()
-        }
-        if textField == bottom {
-            bottom.resignFirstResponder()
-    }
-        return true
-    }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable( .camera)
         super.viewWillAppear(animated)
