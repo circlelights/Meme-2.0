@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SentMemesTableVC : UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SentMemesTableVC : UITableViewController {
     
     @IBOutlet weak var tableLayout: UITableView!
     
@@ -22,11 +22,11 @@ class SentMemesTableVC : UIViewController, UITableViewDataSource, UITableViewDel
     
     // MARK: Table View Data Source
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.memes.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemesCell")!
         let thismeme = self.memes[(indexPath as NSIndexPath).row]
@@ -43,7 +43,7 @@ class SentMemesTableVC : UIViewController, UITableViewDataSource, UITableViewDel
         return cell
     }
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
 }
