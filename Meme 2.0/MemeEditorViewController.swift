@@ -118,6 +118,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         activityViewController.completionWithItemsHandler = { (_, successful, _, _) in
             if successful {
                 self.saveMeme(memedImage: memedImage)
+ 
+                
+ //               present(SentMemesTableVC, animated: true, completion: nil)
             }
         }
     }

@@ -6,8 +6,6 @@
 //  Copyright © 2017 Developer2017. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 
 class SentMemesCollectionViewController : UICollectionViewController {
