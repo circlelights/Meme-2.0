@@ -28,11 +28,11 @@
             </objects>
             <point key="canvasLocation" x="-1818" y="-69"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Cm8-r8-pIq">
             <objects>
                 <navigationController id="ff5-6m-gxj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ymR-tT-mT4"/>
+                    <tabBarItem key="tabBarItem" title="" image="collection_30x30" id="ymR-tT-mT4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vrg-tz-NNM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -198,11 +198,11 @@
             </objects>
             <point key="canvasLocation" x="964" y="-57"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="k2p-Xf-tVb">
             <objects>
                 <navigationController id="yEO-Xg-9dK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="w7X-EJ-UQC"/>
+                    <tabBarItem key="tabBarItem" title="" image="table_30x30" id="w7X-EJ-UQC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zNa-qo-Tz8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -224,7 +224,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gu6-uP-CLM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemesCell" id="gu6-uP-CLM">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gu6-uP-CLM" id="DGj-XP-bof">
@@ -251,7 +251,11 @@
             <point key="canvasLocation" x="175" y="-599"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="collection_30x30" width="30" height="30"/>
+        <image name="table_30x30" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ev6-rm-uaJ"/>
+        <segue reference="e44-Sr-XgG"/>
     </inferredMetricsTieBreakers>
 </document>
