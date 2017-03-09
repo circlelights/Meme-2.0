@@ -49,7 +49,7 @@
         <scene sceneID="OA4-RX-8hf">
             <objects>
                 <collectionViewController id="Ngl-0d-jHO" customClass="SentMemesCollectionViewController" customModule="Meme_2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="xXy-jz-bMD">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xXy-jz-bMD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -83,7 +83,13 @@
                             <outlet property="delegate" destination="Ngl-0d-jHO" id="X7L-I6-Dmb"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="ASV-fq-r4w"/>
+                    <navigationItem key="navigationItem" id="ASV-fq-r4w">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ALl-qO-3x8">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="showDetail" id="ev6-rm-uaJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGx-wO-g5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="451-Tj-upy">
-                                <rect key="frame" x="0.0" y="613" width="375" height="54"/>
+                                <rect key="frame" x="0.0" y="546" width="600" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="rOH-ec-znN"/>
                                 </constraints>
@@ -123,10 +129,10 @@
                                 </items>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ql-3T-eyH">
-                                <rect key="frame" x="16" y="44" width="343" height="569"/>
+                                <rect key="frame" x="20" y="44" width="560" height="502"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2Ky-zD-gPD">
-                                <rect key="frame" x="75" y="117" width="225" height="40"/>
+                                <rect key="frame" x="79" y="117" width="442" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Fno-f7-S0K"/>
                                 </constraints>
@@ -135,7 +141,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Kz6-2N-icD">
-                                <rect key="frame" x="75" y="518" width="225" height="40"/>
+                                <rect key="frame" x="79" y="451" width="442" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="XKj-bp-HRK"/>
                                 </constraints>
@@ -144,7 +150,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3l0-5I-xdz">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Meme 2.0" id="9tF-84-aJd">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="xlv-Ie-VqX">
@@ -232,11 +238,20 @@
                             <outlet property="delegate" destination="CCl-iB-TjX" id="LWQ-Dg-r30"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ZaD-Jh-xsk"/>
+                    <navigationItem key="navigationItem" id="ZaD-Jh-xsk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pci-o6-VWv">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="showDetail" id="e44-Sr-XgG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qI4-OU-9DS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="175" y="-599"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ev6-rm-uaJ"/>
+    </inferredMetricsTieBreakers>
 </document>

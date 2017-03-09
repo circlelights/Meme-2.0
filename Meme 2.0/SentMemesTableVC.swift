@@ -31,9 +31,12 @@ class SentMemesTableVC : UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemesCell")!
         let thismeme = self.memes[(indexPath as NSIndexPath).row]
         
+        
         // Set the name and image
-//        cell.textLabel?.text = memes.name
-//        cell.imageView?.image = UIImage(named: memes.imageName)
+        // Set the name and image
+        cell.textLabel?.text = thismeme.topString
+        cell.textLabel?.text = thismeme.bottomString
+        cell.imageView?.image = thismeme.memedImage
 //        
 //        // If the cell has a detail label, we will put the evil scheme in.
 //        if let detailTextLabel = cell.detailTextLabel {
