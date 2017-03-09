@@ -90,6 +90,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="flowLayout" destination="VTJ-Xt-q1y" id="wlg-cC-alL"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGx-wO-g5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,6 +259,6 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e44-Sr-XgG"/>
+        <segue reference="ev6-rm-uaJ"/>
     </inferredMetricsTieBreakers>
 </document>

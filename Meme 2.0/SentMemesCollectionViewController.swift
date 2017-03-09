@@ -19,6 +19,14 @@ class SentMemesCollectionViewController : UICollectionViewController {
     override func viewDidLoad() {
         let applicationDelegate = (UIApplication.shared.delegate as! AppDelegate)
         memes = applicationDelegate.memes
+        
+        let space:CGFloat = 3.0
+        let dimension = (view.frame.size.width - (2 * space)) / 3.0
+        
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+    
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
