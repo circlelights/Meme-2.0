@@ -14,4 +14,19 @@ struct Meme {
     var bottomString: String
     var originalImage: UIImage
     var memedImage: UIImage
+    
+    static let TopNameKey = "TopNameKey"
+    static let BottomNameKey = "BottomNameKey"
+//    static let ImageNameKey = UIImage.self
+    
+    // MARK: Initializer
+    
+    // Generate a Villain from a three entry dictionary
+    
+    init(dictionary: [String : String]) {
+        
+        self.topString = dictionary[Meme.TopNameKey]!
+        self.bottomString = dictionary[Meme.BottomNameKey]!
+ //       self.memedImage = dictionary[Meme.ImageNameKey]!
+    }
 }
