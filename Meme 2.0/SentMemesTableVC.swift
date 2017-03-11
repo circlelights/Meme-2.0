@@ -18,8 +18,6 @@ class SentMemesTableVC : UITableViewController {
     let applicationDelegate = UIApplication.shared.delegate as! AppDelegate
     
     
-//    var memes = applicationDelegate.memes
-    
     override func viewDidLoad() {
         
 }
@@ -39,11 +37,7 @@ class SentMemesTableVC : UITableViewController {
         cell.textLabel?.text = thismeme.topString
         cell.textLabel?.text = thismeme.bottomString
         cell.imageView?.image = thismeme.memedImage
-//        
-//        // If the cell has a detail label, we will put the evil scheme in.
-//        if let detailTextLabel = cell.detailTextLabel {
-//            detailTextLabel.text = "Scheme: \(villain.evilScheme)"
-//        }
+
         
         return cell
     }
