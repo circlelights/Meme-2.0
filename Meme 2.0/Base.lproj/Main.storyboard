@@ -214,15 +214,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QSv-GZ-gXC">
-                                <rect key="frame" x="55" y="146" width="265" height="374"/>
+                                <rect key="frame" x="16" y="91" width="343" height="522"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QSv-GZ-gXC" firstAttribute="leading" secondItem="IVe-kx-fdH" secondAttribute="leadingMargin" constant="39" id="3uB-uo-tzO"/>
-                            <constraint firstItem="QSv-GZ-gXC" firstAttribute="top" secondItem="tYu-iQ-y60" secondAttribute="bottom" constant="126" id="94c-pK-srF"/>
-                            <constraint firstItem="ivy-3f-9Qn" firstAttribute="top" secondItem="QSv-GZ-gXC" secondAttribute="bottom" constant="147" id="Ilp-dQ-6zM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QSv-GZ-gXC" secondAttribute="trailing" constant="39" id="hqi-q6-Voo"/>
+                            <constraint firstItem="QSv-GZ-gXC" firstAttribute="top" secondItem="tYu-iQ-y60" secondAttribute="bottom" constant="71" id="0p0-Bv-hCw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QSv-GZ-gXC" secondAttribute="trailing" id="D8i-Hd-AOh"/>
+                            <constraint firstItem="QSv-GZ-gXC" firstAttribute="leading" secondItem="IVe-kx-fdH" secondAttribute="leadingMargin" id="SEc-it-viP"/>
+                            <constraint firstItem="ivy-3f-9Qn" firstAttribute="top" secondItem="QSv-GZ-gXC" secondAttribute="bottom" constant="54" id="Shp-uO-aGS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -231,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gX8-Wd-XM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="-585"/>
+            <point key="canvasLocation" x="1036" y="-585.1574212893554"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k2p-Xf-tVb">
@@ -250,16 +250,16 @@
             </objects>
             <point key="canvasLocation" x="-916" y="-559"/>
         </scene>
-        <!--Sent Memes TableVC-->
+        <!--Sent Memes-->
         <scene sceneID="h36-EQ-k1t">
             <objects>
-                <tableViewController id="CCl-iB-TjX" customClass="SentMemesTableVC" customModule="Meme_2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="O0h-pX-LkS">
+                <tableViewController title="Sent Memes" id="CCl-iB-TjX" customClass="SentMemesTableVC" customModule="Meme_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="O0h-pX-LkS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemesCell" textLabel="4vP-wG-6ZW" style="IBUITableViewCellStyleDefault" id="gu6-uP-CLM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemesCell" textLabel="4vP-wG-6ZW" rowHeight="44" style="IBUITableViewCellStyleDefault" id="gu6-uP-CLM">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gu6-uP-CLM" id="DGj-XP-bof">

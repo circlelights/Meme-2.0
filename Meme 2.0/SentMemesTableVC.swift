@@ -37,8 +37,7 @@ class SentMemesTableVC : UITableViewController {
         let thismeme = applicationDelegate.memes[(indexPath as NSIndexPath).row]
         
         // Set the name and image
-        cell.textLabel?.text = thismeme.topString
-        cell.textLabel?.text = thismeme.bottomString
+        cell.textLabel?.text = thismeme.topString + "  " + thismeme.bottomString
         cell.imageView?.image = thismeme.memedImage
 
         
