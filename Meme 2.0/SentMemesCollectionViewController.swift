@@ -42,8 +42,6 @@ class SentMemesCollectionViewController : UICollectionViewController {
         let newMeme = self.memes[(indexPath as NSIndexPath).row]
         
         // Set the name and image
-//        cell.topLabel.text = newMeme.topString
-//        cell.bottomLabel.text = newMeme.bottomString
         cell.memeImageView?.image = newMeme.memedImage
         
         return cell

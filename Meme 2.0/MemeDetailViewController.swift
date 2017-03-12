@@ -21,4 +21,8 @@ class MemeDetailViewController: UIViewController {
         self.imageView!.image = self.completeMeme.memedImage
         self.tabBarController?.tabBar.isHidden = true
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
 }

@@ -75,7 +75,6 @@
                                 </view>
                                 <connections>
                                     <outlet property="memeImageView" destination="buU-iy-BnJ" id="7gr-Ye-I9u"/>
-                                    <segue destination="9JE-GD-Ggf" kind="show" action="showDetailViewController:sender:" id="vWd-fJ-jZ9"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -205,7 +204,7 @@
         <!--Meme Detail View Controller-->
         <scene sceneID="nFD-OR-HWb">
             <objects>
-                <viewController id="9JE-GD-Ggf" customClass="MemeDetailViewController" customModule="Meme_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailViewController" id="9JE-GD-Ggf" customClass="MemeDetailViewController" customModule="Meme_2_0" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tYu-iQ-y60"/>
                         <viewControllerLayoutGuide type="bottom" id="ivy-3f-9Qn"/>
@@ -276,9 +275,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="9JE-GD-Ggf" kind="showDetail" action="showViewController:sender:" id="YCd-xe-EUl"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -304,7 +300,6 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ev6-rm-uaJ"/>
-        <segue reference="vWd-fJ-jZ9"/>
+        <segue reference="e44-Sr-XgG"/>
     </inferredMetricsTieBreakers>
 </document>
