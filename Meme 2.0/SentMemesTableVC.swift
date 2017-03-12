@@ -17,9 +17,13 @@ class SentMemesTableVC : UITableViewController {
     
     let applicationDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    
     override func viewDidLoad() {
         
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
 }
     
     // MARK: Table View Data Source
