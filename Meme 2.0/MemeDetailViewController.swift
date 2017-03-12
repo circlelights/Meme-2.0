@@ -12,10 +12,13 @@ class MemeDetailViewController: UIViewController {
     
     var completeMeme: Meme!
     
+    let applicationDelegate = (UIApplication.shared.delegate as! AppDelegate)
+    
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.imageView!.image = completeMeme.memedImage
+        self.imageView!.image = self.completeMeme.memedImage
+        self.tabBarController?.tabBar.isHidden = true
     }
 }

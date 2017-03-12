@@ -11,7 +11,6 @@ import UIKit
 
 class SentMemesTableVC : UITableViewController {
     
-    @IBOutlet weak var tableLayout: UITableView!
     
     var memes: [Meme]!
     

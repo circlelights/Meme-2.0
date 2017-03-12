@@ -75,6 +75,7 @@
                                 </view>
                                 <connections>
                                     <outlet property="memeImageView" destination="buU-iy-BnJ" id="7gr-Ye-I9u"/>
+                                    <segue destination="9JE-GD-Ggf" kind="show" action="showDetailViewController:sender:" id="vWd-fJ-jZ9"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -86,7 +87,7 @@
                     <navigationItem key="navigationItem" id="ASV-fq-r4w">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ALl-qO-3x8">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="showDetail" id="ev6-rm-uaJ"/>
+                                <segue destination="BYZ-38-t0r" kind="show" action="showDetailViewController:sender:" id="ev6-rm-uaJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -199,7 +200,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="-57.121439280359823"/>
+            <point key="canvasLocation" x="956" y="356"/>
+        </scene>
+        <!--Meme Detail View Controller-->
+        <scene sceneID="nFD-OR-HWb">
+            <objects>
+                <viewController id="9JE-GD-Ggf" customClass="MemeDetailViewController" customModule="Meme_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tYu-iQ-y60"/>
+                        <viewControllerLayoutGuide type="bottom" id="ivy-3f-9Qn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IVe-kx-fdH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QSv-GZ-gXC">
+                                <rect key="frame" x="55" y="146" width="265" height="374"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QSv-GZ-gXC" firstAttribute="leading" secondItem="IVe-kx-fdH" secondAttribute="leadingMargin" constant="39" id="3uB-uo-tzO"/>
+                            <constraint firstItem="QSv-GZ-gXC" firstAttribute="top" secondItem="tYu-iQ-y60" secondAttribute="bottom" constant="126" id="94c-pK-srF"/>
+                            <constraint firstItem="ivy-3f-9Qn" firstAttribute="top" secondItem="QSv-GZ-gXC" secondAttribute="bottom" constant="147" id="Ilp-dQ-6zM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QSv-GZ-gXC" secondAttribute="trailing" constant="39" id="hqi-q6-Voo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="QSv-GZ-gXC" id="W1c-l0-xVf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gX8-Wd-XM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036" y="-585"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k2p-Xf-tVb">
@@ -243,6 +276,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="9JE-GD-Ggf" kind="showDetail" action="showViewController:sender:" id="YCd-xe-EUl"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -269,5 +305,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ev6-rm-uaJ"/>
+        <segue reference="vWd-fJ-jZ9"/>
     </inferredMetricsTieBreakers>
 </document>
