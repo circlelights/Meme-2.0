@@ -120,7 +120,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
                 self.saveMeme(memedImage: memedImage)
  
                 
- //               present(SentMemesTableVC, animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
             }
         }
     }

@@ -27,6 +27,11 @@ class SentMemesCollectionViewController : UICollectionViewController {
     
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        collectionView?.reloadData()
+    }
+    
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.memes.count
     }
@@ -37,8 +42,8 @@ class SentMemesCollectionViewController : UICollectionViewController {
         let newMeme = self.memes[(indexPath as NSIndexPath).row]
         
         // Set the name and image
-        cell.topLabel.text = newMeme.topString
-        cell.bottomLabel.text = newMeme.bottomString
+//        cell.topLabel.text = newMeme.topString
+//        cell.bottomLabel.text = newMeme.bottomString
         cell.memeImageView?.image = newMeme.memedImage
         
         return cell
