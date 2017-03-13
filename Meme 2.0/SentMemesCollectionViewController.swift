@@ -14,8 +14,9 @@ class SentMemesCollectionViewController : UICollectionViewController {
     
     var memes: [Meme]!
     
+    let applicationDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
-        let applicationDelegate = (UIApplication.shared.delegate as! AppDelegate)
         memes = applicationDelegate.memes
         
         let space:CGFloat = 3.0
@@ -33,7 +34,7 @@ class SentMemesCollectionViewController : UICollectionViewController {
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.memes.count
+        return applicationDelegate.memes.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

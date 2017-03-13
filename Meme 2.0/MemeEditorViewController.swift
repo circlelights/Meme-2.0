@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeEditorViewController.swift
 //  Meme 1.0
 //
 //  Created by Developer2017 on 1/17/17.
@@ -78,6 +78,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         bottom.text = "BOTTOM"
         top.text = "TOP"
         imagePickerView.image = nil
+        dismiss(animated: true, completion: nil)
     }
     
     
@@ -94,10 +95,14 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func generateMemedImage() -> UIImage {
 
         // Render view to an image
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.toolbar.isHidden = true
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memeImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.toolbar.isHidden = false
         
         return memeImage
     }
