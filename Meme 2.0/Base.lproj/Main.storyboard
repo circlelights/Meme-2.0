@@ -38,7 +38,7 @@
             <objects>
                 <navigationController id="ff5-6m-gxj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="collection_30x30" id="ymR-tT-mT4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vrg-tz-NNM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vrg-tz-NNM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -54,7 +54,7 @@
         <scene sceneID="OA4-RX-8hf">
             <objects>
                 <collectionViewController id="Ngl-0d-jHO" customClass="SentMemesCollectionViewController" customModule="Meme_2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xXy-jz-bMD">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="xXy-jz-bMD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -199,6 +199,7 @@
                         <outlet property="bottom" destination="Kz6-2N-icD" id="m10-Wr-htd"/>
                         <outlet property="cameraButton" destination="tzR-g9-LB9" id="zVq-Ef-Cr8"/>
                         <outlet property="imagePickerView" destination="8ql-3T-eyH" id="nh5-dh-76p"/>
+                        <outlet property="navBar" destination="3l0-5I-xdz" id="P6r-ue-uWP"/>
                         <outlet property="top" destination="2Ky-zD-gPD" id="cVN-HX-9by"/>
                     </connections>
                 </viewController>
@@ -219,15 +220,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QSv-GZ-gXC">
-                                <rect key="frame" x="16" y="91" width="343" height="522"/>
+                                <rect key="frame" x="16" y="55" width="343" height="522"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QSv-GZ-gXC" firstAttribute="top" secondItem="tYu-iQ-y60" secondAttribute="bottom" constant="71" id="0p0-Bv-hCw"/>
+                            <constraint firstItem="QSv-GZ-gXC" firstAttribute="top" secondItem="tYu-iQ-y60" secondAttribute="bottom" constant="35" id="0p0-Bv-hCw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QSv-GZ-gXC" secondAttribute="trailing" id="D8i-Hd-AOh"/>
                             <constraint firstItem="QSv-GZ-gXC" firstAttribute="leading" secondItem="IVe-kx-fdH" secondAttribute="leadingMargin" id="SEc-it-viP"/>
-                            <constraint firstItem="ivy-3f-9Qn" firstAttribute="top" secondItem="QSv-GZ-gXC" secondAttribute="bottom" constant="54" id="Shp-uO-aGS"/>
+                            <constraint firstItem="ivy-3f-9Qn" firstAttribute="top" secondItem="QSv-GZ-gXC" secondAttribute="bottom" constant="90" id="Shp-uO-aGS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -243,7 +244,7 @@
             <objects>
                 <navigationController id="yEO-Xg-9dK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="table_30x30" id="w7X-EJ-UQC"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zNa-qo-Tz8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zNa-qo-Tz8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -305,6 +306,6 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e44-Sr-XgG"/>
+        <segue reference="ev6-rm-uaJ"/>
     </inferredMetricsTieBreakers>
 </document>

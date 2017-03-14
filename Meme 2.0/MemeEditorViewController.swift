@@ -17,6 +17,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var top: UITextField!
     let imagePicker = UIImagePickerController()
+    @IBOutlet weak var navBar: UINavigationBar?
+    @IBOutlet weak var theToolBar: UIToolbar?
+    
+    
     
     let memeTextAttributes:[String:Any] = [
         NSStrokeColorAttributeName: UIColor.black,
@@ -95,14 +99,14 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func generateMemedImage() -> UIImage {
 
         // Render view to an image
-        self.navigationController?.isNavigationBarHidden = true
-        self.navigationController?.toolbar.isHidden = true
+        navBar?.isHidden = true
+        theToolBar?.isHidden = true
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memeImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.toolbar.isHidden = false
+        navBar?.isHidden = false
+        theToolBar?.isHidden = false
         
         return memeImage
     }
@@ -139,14 +143,14 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     //Move the view so that the textfield is not obscured
     func keyboardWillShow(_ notification:Notification) {
         if bottom.isEditing == true {
-            self.view.frame.origin.y = 0 - getKeyboardHeight(notification)
+            view.frame.origin.y = -getKeyboardHeight(notification)
         }   else {
-            self.view.frame.origin.y = 0
+            view.frame.origin.y = 0
         }
     }
     
     func keyboardWillHide(_ notification:Notification) {
-        self.view.frame.origin.y = 0
+            view.frame.origin.y = 0
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
