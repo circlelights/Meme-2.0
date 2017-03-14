@@ -17,6 +17,7 @@
 		9B25E9F21E709D95009C7076 /* MemesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25E9F11E709D95009C7076 /* MemesCollectionViewCell.swift */; };
 		9B25E9F41E70A960009C7076 /* MemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25E9F31E70A960009C7076 /* MemeDetailViewController.swift */; };
 		EB1DEDC01E62196300C42E2E /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1DEDBF1E62196300C42E2E /* Meme.swift */; };
+		EB54C58F1E777E2C009AB485 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB54C58E1E777E2C009AB485 /* Impact.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9B25E9F11E709D95009C7076 /* MemesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9B25E9F31E70A960009C7076 /* MemeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeDetailViewController.swift; sourceTree = "<group>"; };
 		EB1DEDBF1E62196300C42E2E /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		EB54C58E1E777E2C009AB485 /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				9B25E9EF1E705249009C7076 /* SentMemesTableVC.swift */,
 				9B155ABD1E2EC7E000ED6DB8 /* Main.storyboard */,
 				9B155AC01E2EC7E000ED6DB8 /* Assets.xcassets */,
+				EB54C58E1E777E2C009AB485 /* Impact.ttf */,
 				9B155AC21E2EC7E000ED6DB8 /* LaunchScreen.storyboard */,
 				9B155AC51E2EC7E000ED6DB8 /* Info.plist */,
 			);
@@ -139,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB54C58F1E777E2C009AB485 /* Impact.ttf in Resources */,
 				9B155AC41E2EC7E000ED6DB8 /* LaunchScreen.storyboard in Resources */,
 				9B155AC11E2EC7E000ED6DB8 /* Assets.xcassets in Resources */,
 				9B155ABF1E2EC7E000ED6DB8 /* Main.storyboard in Resources */,

@@ -21,13 +21,17 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>"This App requires access to the Camera"</string>
+	<string>&quot;This App requires access to the Camera&quot;</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>"Just testing!"</string>
+	<string>&quot;Just testing!&quot;</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Impact.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
