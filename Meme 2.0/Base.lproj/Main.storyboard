@@ -116,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="451-Tj-upy">
-                                <rect key="frame" x="0.0" y="613" width="375" height="54"/>
+                                <rect key="frame" x="0.0" y="564" width="375" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="rOH-ec-znN"/>
                                 </constraints>
@@ -137,10 +137,10 @@
                                 </items>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ql-3T-eyH">
-                                <rect key="frame" x="16" y="98" width="343" height="490"/>
+                                <rect key="frame" x="16" y="142" width="343" height="397"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Kz6-2N-icD">
-                                <rect key="frame" x="75" y="542" width="225" height="40"/>
+                                <rect key="frame" x="75" y="493" width="225" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="mHv-Sf-L1Y"/>
                                 </constraints>
@@ -149,7 +149,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="3l0-5I-xdz">
-                                <rect key="frame" x="0.0" y="39" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="83" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Meme 2.0" id="9tF-84-aJd">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="xlv-Ie-VqX">
@@ -166,7 +166,7 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2Ky-zD-gPD">
-                                <rect key="frame" x="75" y="104" width="225" height="40"/>
+                                <rect key="frame" x="75" y="148" width="225" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="qF5-ga-B6t"/>
                                 </constraints>
@@ -200,6 +200,7 @@
                         <outlet property="cameraButton" destination="tzR-g9-LB9" id="zVq-Ef-Cr8"/>
                         <outlet property="imagePickerView" destination="8ql-3T-eyH" id="nh5-dh-76p"/>
                         <outlet property="navBar" destination="3l0-5I-xdz" id="P6r-ue-uWP"/>
+                        <outlet property="theToolBar" destination="451-Tj-upy" id="0mb-7z-fBg"/>
                         <outlet property="top" destination="2Ky-zD-gPD" id="cVN-HX-9by"/>
                     </connections>
                 </viewController>
